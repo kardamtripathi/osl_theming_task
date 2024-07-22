@@ -1,0 +1,62 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link URL, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+We call a macro which calls itself to render the full tree.
+@see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+<div class="nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="/news/web/" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="/news/web/" class="nav-item nav-link active">Home</a>
+                            <div class="nav-item dropdown">
+                                <a href="/news/web/news" class="nav-link dropdown-toggle" data-toggle="dropdown">News</a>
+                                <div class="dropdown-menu">
+                                    <a href="/news/web/sports" class="dropdown-item">Sports</a>
+                                    <a href="/news/web/technology" class="dropdown-item">Technology</a>
+                                    <a href="/news/web/business" class="dropdown-item">Business</a>
+                                    <a href="/news/web/entertainment" class="dropdown-item">Entertainment</a>
+                                </div>
+                            </div>
+                            <a href="/news/web/sports" class="nav-item nav-link">Sports</a>
+                            <a href="/news/web/technology" class="nav-item nav-link">Technology</a>
+                            <a href="/news/web/business" class="nav-item nav-link">Business</a>
+                            <a href="/news/web/entertainment" class="nav-item nav-link">Entertainment</a>
+                        </div>
+                        <div class="social ml-auto">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>

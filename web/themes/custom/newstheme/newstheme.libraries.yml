@@ -1,0 +1,13 @@
+global:
+  css: 
+    theme: 
+      css/style.css: {}
+      css/custom.css: {}
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css': {type: external}
+      'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css': {type: external}
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css': {type: external}
+      'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css': {type: external}
+  js:
+    js/main.js: {}
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js': {type: external}
+    'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js': {type: external}
